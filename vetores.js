@@ -26,17 +26,18 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
             cidadesDisponiveis.push(cidade[i])
         }
     }
+    cidadesDisponiveis = cidadesDisponiveis.sort();
 
 
-
-    //Adiciona as opções de cidades disponíveis no select Cidade
     for(let i = 0; i < cidadesDisponiveis.length; i++){
-        var select = document.getElementById("inCidade");
+        var datalist = document.getElementById("cidadesDisponiveis");
         var option = document.createElement("option");
-        option.value = cidadesDisponiveis[i]
-        option.textContent = cidadesDisponiveis[i]
-        select.appendChild(option)
+        option.value = cidadesDisponiveis[i];
+        datalist.appendChild(option);
     }
+
+
+
 
     var imoveis = document.querySelector(".imoveis");
     imoveis.innerText = ""; //Limpa toda section atribuindo uma string vazia pra ela
@@ -151,18 +152,25 @@ function conferirBairros(){
     option.textContent = "Todos";
     select.appendChild(option);
 
-    // var bairrosDisponiveis = [];
-    // for(var i = 0; i < bairro.length; i++){
-    //     if (bairrosDisponiveis.indexOf(bairro[i]) == -1){
-    //         bairrosDisponiveis.push(bairro[i])
-    //     }
-    // }
-
+    //Cria um vetor só com os bairros disponíveis dependendo da cidade selecionada
+    var bairrosDisponiveis = [];
     for(var i = 0; i < bairro.length; i++){
-        if(cidadeSelecionada == cidade[i] || cidadeSelecionada == "Todas"){
+        if (bairrosDisponiveis.indexOf(bairro[i]) == -1){
+            bairrosDisponiveis.push(bairro[i]);
+        }
+    }
+    bairrosDisponiveis = bairrosDisponiveis.sort();
+
+    for(var i = 0; i < bairrosDisponiveis.length; i++){
+                                //A primeira letra maiúscula concatenada com uma substring a partir do índice 1 toda lowercase
+        bairrosDisponiveis[i] = bairrosDisponiveis[i][0].toUpperCase() + bairrosDisponiveis[i].substring(1).toLowerCase();
+    }
+
+    for(var i = 0; i < bairrosDisponiveis.length; i++){
+        if(cidadeSelecionada == cidade[i] || cidadeSelecionada == ""){
             var option = document.createElement("option");
-            option.value = bairro[i];
-            option.textContent = bairro[i];
+            option.value = bairrosDisponiveis[i];
+            option.textContent = bairrosDisponiveis[i];
             select.appendChild(option);
         }
     }

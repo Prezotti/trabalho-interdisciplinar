@@ -30,10 +30,13 @@
         <label><img src="../imagens-site/icon-duplex.png"><input id="cbDuplex" type="checkbox">Duplex</label>
         <label><img src="../imagens-site/icon-plot.png"><input id="cbTerreno" type="checkbox">Terreno</label>
 
+
         <h2>Cidade</h2>
-        <select id="inCidade">
-            <option value="Todas">Todas</option>
-        </select>
+        <input type="search" id="inCidade" list="cidadesDisponiveis">
+
+        <datalist id="cidadesDisponiveis">
+        </datalist>
+        
 
         <h2>Bairro</h2>
         <select id="inBairro">
