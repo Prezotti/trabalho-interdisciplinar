@@ -1,4 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Jaldi&display=swap');
+
+body{
+    background-color: #f5fcfd;
+}
+
+.filtros{
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Hepta Slab', serif;
+    display: flex;
+}
+
+.filtro{
+    background-color: #EDFBFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    box-sizing: border-box;
+}
+
+.filtro h2{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.icon-filtro{
+    height: 32px;
+}
+
+.filtro-areaConstruida{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-areaConstruida label{
+    width: 50%;
+    margin: 10px 0;
+}
+
+.filtro-areaConstruida input{
+    border: solid 1px #D2D2D2;
+    border-radius: 5px;
+    height: 20px;
+    padding: 2px 10px;
+    font-family: 'Hepta Slab', serif;
+}
+
+.filtro-esquerda{
+    width: 60%;
+}
+.filtro-direita {
+    width: 37%;
+    margin-left: 3%;
+}
+
+.filtro-tipoImovel{
+    height: 200px;
+    width: 100%;    
+}
+
+.filtro-opcoes{
+    display: flex;
+    margin-top: 20px;
+}
+
+.opcoes-dupla{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    gap: 30px;
+}
+
+.filtro-bairro{  
+    height: 120px;
+    width: 100%;
+}
+
+.filtro-bairro select{
+    border: solid 1px #D2D2D2;
+    border-radius: 5px;
+    height: 30px;
+    width: 80%;
+    padding: 5px 10px;
+    font-family: 'Hepta Slab', serif;
+}
+
+.filtro-cidade{
+    height: 120px;
+    width: 100%;
+}
+
+.filtro-cidade input{
+    border: solid 1px #D2D2D2;
+    border-radius: 5px;
+    height: 30px;
+    width: 60%;
+    padding: 5px 10px;
+    font-family: 'Hepta Slab', serif;
+}
+
+.bt-filtrar{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin: 0px auto 50px auto;
+    color: #fff;
+    background-color: #00ACD7;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bt-filtrar:hover{
+    background-color: #036d88;
+    cursor: pointer;
+}
+
+
 .imovel{
+    font-family: 'Hepta Slab', serif;
+    padding: 10px;
+
     display: flex;
     align-items: center;
 
@@ -7,6 +133,16 @@
     width: 70%;
 
     margin: 10px auto;
+
+    transition: 0.2s all;
+
+    background-color: #fff;
+}
+
+.imovel:hover{
+    transform: translateX(10px);
+    border: 3px solid #036d88;
+    cursor: pointer;
 }
 
 .informacoes-imovel{
@@ -15,10 +151,45 @@
 
 .tipo-imovel{
     font-size: 1.5em;
-    margin: 5px 0;
+    margin-bottom: 20px;
+}
+
+.tipo-detalhes{
+    margin: 15px 0;
+    font-size: 0.8em;
 }
 
 .img-imovel{
     height: 150px;
     border-radius: 10px;
+    transition: 0.2s all;
 }
+
+.limpa-filtros{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 48px;
+    transition: 0.2s all;
+}
+
+.limpa-filtros:hover{
+    cursor: pointer;
+    transform: scale(1.2) rotate(-10deg);
+}
+
+  .ajuda{
+    display: none;
+    color: #fff;
+    background-color: #00ACD7;
+    width: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+  }
+
+  .limpa-filtros:hover ~ .ajuda{
+    display: block;
+  }
