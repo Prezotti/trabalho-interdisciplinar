@@ -1,4 +1,24 @@
+.imovel{
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    border: solid 3px #00ACD7;
+    width: 70%;
+
+    margin: 10px auto;
+}
+
+.informacoes-imovel{
+    margin-left: 20px;
+}
+
+.tipo-imovel{
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
 .img-imovel{
-    height: 120px;
+    height: 150px;
     border-radius: 10px;
 }
