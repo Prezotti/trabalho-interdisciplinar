@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="reset.css">
+    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="pesquisar-imoveis.css">
     <link rel="icon" type="imagem/png" href="../imagens-site/logo-parcial-negativa.png" />
     <title>Dreams - Imobiliaria</title>
@@ -17,35 +17,66 @@
 
     <main>
 
+        <section class="filtros">
+            
+            <div class="filtro-esquerda">
 
-        <h2>Área construida</h2>
-        <label>Mínimo<input id="inAreaMinima" type="number"></label>
-        <label>Máximo<input id="inAreaMaxima" type="number"></label>
+                <div class="filtro filtro-cidade">
+                    <h2>Cidade</h2>
+                    <input type="search" id="inCidade" list="cidadesDisponiveis">
+                </div>
 
-        <h2>Tipo do imóvel</h2>
-        <label><img src="../imagens-site/icon-apartamento.png"><input id="cbApartamento" type="checkbox">Apartamento</label>
-        <label><img src="../imagens-site/icon-casa.png"><input id="cbCasa" type="checkbox">Casa</label>
-        <label><img src="../imagens-site/icon-cabin.png"><input id="cbSitio" type="checkbox">Sítio</label>
-        <label><img src="../imagens-site/icon-loja.png"><input id="cbLoja" type="checkbox">Loja</label>
-        <label><img src="../imagens-site/icon-duplex.png"><input id="cbDuplex" type="checkbox">Duplex</label>
-        <label><img src="../imagens-site/icon-plot.png"><input id="cbTerreno" type="checkbox">Terreno</label>
+                <datalist id="cidadesDisponiveis">
+                </datalist>
 
+                <div class="filtro filtro-tipoImovel">
+                    <h2>Tipo do imóvel</h2>
+                    <div class="filtro-opcoes">
+                        <div class="opcoes-dupla">
+                            <label><img src="../imagens-site/icon-apartamento.png" class="icon-filtro"><input id="cbApartamento" type="checkbox">Apartamento</label>
+                            <label><img src="../imagens-site/icon-casa.png" class="icon-filtro"><input id="cbCasa" type="checkbox">Casa</label>
+                        </div>
+                        <div class="opcoes-dupla">
+                            <label><img src="../imagens-site/icon-cabin.png" class="icon-filtro"><input id="cbSitio" type="checkbox">Sítio</label>
+                            <label><img src="../imagens-site/icon-loja.png" class="icon-filtro"><input id="cbLoja" type="checkbox">Loja</label>
+                        </div>                 
+                        <div class="opcoes-dupla">
+                            <label><img src="../imagens-site/icon-duplex.png" class="icon-filtro"><input id="cbDuplex" type="checkbox">Duplex</label>
+                            <label><img src="../imagens-site/icon-plot.png" class="icon-filtro"><input id="cbTerreno" type="checkbox">Terreno</label>
+                        </div>
+                    </div>
+                </div>               
 
-        <h2>Cidade</h2>
-        <input type="search" id="inCidade" list="cidadesDisponiveis">
+            </div>
 
-        <datalist id="cidadesDisponiveis">
-        </datalist>
+            <div class="filtro-direita">
+
+                <div class="filtro filtro-bairro">
+                    <h2>Bairro</h2>
+                    <select id="inBairro">
+                        <option value="Todos">Todos</option>
+                    </select>
+                </div>
+
+                <div class="filtro filtro-areaConstruida">
+                    <h2>Área construida</h2>
+                    <label>Mínimo<input id="inAreaMinima" type="number"></label>
+                    <label>Máximo<input id="inAreaMaxima" type="number"></label>
+                </div>
+
+            </div>
+
+        </section>
         
+        <input class="bt-filtrar" id="btFiltrar" type="submit" value="Filtrar imóveis">
 
-        <h2>Bairro</h2>
-        <select id="inBairro">
-            <option value="Todos">Todos</option>
-        </select>
+        <div class="qtdImoveis">
 
-        <input id="btFiltrar" type="submit" value="Filtrar imóveis">
-
+        </div>
+        
         <section class="imoveis">
+
+            
 
             <!-- <div class="imovel">
                 <img class="img-imovel" src="../imagens-imoveis/apartamento 027.jpg" alt="">
@@ -58,6 +89,10 @@
             </div> -->
 
         </section>
+
+        <img src="../imagens-site/icon-borracha.png" class="limpa-filtros" onclick="limparFiltros()">
+        <span class="ajuda">Limpar Filtros</span>
+
     </main>
 
     <footer>

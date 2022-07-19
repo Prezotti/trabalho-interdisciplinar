@@ -19,7 +19,11 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
 
     //cidade = cidade.sort(); //Ordena o vetor cidade em ordem alfabética
 
+    var datalist = document.getElementById("cidadesDisponiveis");
+    datalist.innerText ="";
+
     //Cria um vetor com as cidades disponíveis
+
     var cidadesDisponiveis = [];
     for(var i = 0; i < cidade.length; i++){
         if (cidadesDisponiveis.indexOf(cidade[i]) == -1){
@@ -30,7 +34,7 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
 
 
     for(let i = 0; i < cidadesDisponiveis.length; i++){
-        var datalist = document.getElementById("cidadesDisponiveis");
+        datalist = document.getElementById("cidadesDisponiveis");
         var option = document.createElement("option");
         option.value = cidadesDisponiveis[i];
         datalist.appendChild(option);
@@ -42,12 +46,16 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
     var imoveis = document.querySelector(".imoveis");
     imoveis.innerText = ""; //Limpa toda section atribuindo uma string vazia pra ela
 
+    var contadorImoveis = 0;
+
     for(let i = 0; i < tipo.length; i++){
 
         if ( (areaC[i] >= filtroArea[0] &&  ((areaC[i] <= filtroArea[1]) || filtroArea[1] == 0)) // A área tem que ser maior que o mínimo e menor que o máximo, ou só maior que o mínimo
             && (tipoImovel.indexOf(tipo[i]) > -1 || tipoImovel.length == 0) // tipoImovel.indexOf(tipo[i]) retorna true se o tipo[i] está contido no vetor tipoImovel ou false quando não está
             && (filtroCidade == cidade[i] || filtroCidade == "Todas")
             && (filtroBairro == bairro[i] || filtroBairro == "Todos")){
+
+        contadorImoveis += 1;
 
         var imovel = document.createElement("div");
         imovel.classList.add("imovel");
@@ -69,12 +77,15 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
 
         areaCImovel.textContent = "Área contruida: " + areaC[i] + "m²";
         areaCImovel.classList.add("area-construida-imovel")
+        areaCImovel.classList.add("tipo-detalhes");
 
         areaTImovel.textContent = "Área total: " + areaT[i] + "m²";
-        areaCImovel.classList.add("area-total-imovel");
+        areaTImovel.classList.add("area-total-imovel");
+        areaTImovel.classList.add("tipo-detalhes");
 
         enderecoImovel.textContent = logradouro[i] + ", " + bairro[i] + ", CEP: " + CEP[i];
         enderecoImovel.classList.add("endereco-imovel");
+        enderecoImovel.classList.add("tipo-detalhes");
 
         informacoesImovel.appendChild(tituloImovel)
         informacoesImovel.appendChild(areaCImovel)
@@ -87,6 +98,14 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
         imoveis.appendChild(imovel)
         }
     }
+
+    var qtdImoveis = document.querySelector(".qtdImoveis");
+    qtdImoveis.innerText = "";
+    var textoInformacoes = document.createElement("p");
+    textoInformacoes.textContent = contadorImoveis + " imóveis encontrados com essas especificações!";
+    textoInformacoes.classList.add("texto-informacoes");
+    qtdImoveis.appendChild(textoInformacoes);
+
 }
 
 
@@ -152,29 +171,38 @@ function conferirBairros(){
     option.textContent = "Todos";
     select.appendChild(option);
 
-    //Cria um vetor só com os bairros disponíveis dependendo da cidade selecionada
     var bairrosDisponiveis = [];
+
     for(var i = 0; i < bairro.length; i++){
-        if (bairrosDisponiveis.indexOf(bairro[i]) == -1){
-            bairrosDisponiveis.push(bairro[i]);
-        }
-    }
-    bairrosDisponiveis = bairrosDisponiveis.sort();
-
-    for(var i = 0; i < bairrosDisponiveis.length; i++){
-                                //A primeira letra maiúscula concatenada com uma substring a partir do índice 1 toda lowercase
-        bairrosDisponiveis[i] = bairrosDisponiveis[i][0].toUpperCase() + bairrosDisponiveis[i].substring(1).toLowerCase();
-    }
-
-    for(var i = 0; i < bairrosDisponiveis.length; i++){
-        if(cidadeSelecionada == cidade[i] || cidadeSelecionada == ""){
-            var option = document.createElement("option");
-            option.value = bairrosDisponiveis[i];
-            option.textContent = bairrosDisponiveis[i];
-            select.appendChild(option);
+        if(cidadeSelecionada == cidade[i] || cidadeSelecionada == ""){ //Confere se o bairro corresponde a cidade
+            if (bairrosDisponiveis.indexOf(bairro[i]) == -1){ //confere se esse bairro já foi adicionado
+                bairrosDisponiveis.push(bairro[i]); //Adiciona esse bairro no vetor
+                var option = document.createElement("option");
+                option.value = bairro[i];
+                option.textContent = bairro[i][0].toUpperCase() + bairro[i].substring(1).toLowerCase(); //Mostra o texto com a primeira letra maiúscula
+                select.appendChild(option);
+            }
+            
         }
     }
 
+}
+
+function limparFiltros(){
+    inCidade.value = "";
+    inBairro.value = "Todos";
+    
+    cbApartamento.checked = false;
+    cbCasa.checked = false;
+    cbSitio.checked = false;
+    cbLoja.checked = false;
+    cbDuplex.checked = false;
+    cbTerreno.checked = false;
+
+    inAreaMinima.value = 0;
+    inAreaMaxima.value = "";
+
+    carregarImoveis([0, 0], [], 'Todas', 'Todos');
 }
 
 btFiltrar.addEventListener("click", filtrarImoveis);
