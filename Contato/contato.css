@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
+
+footer {
+  height: 120px;
+  background-color: #118CAB;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.box-footer {
+  margin: 80px;
+}
+
+.logo-footer {
+  padding: 15px;
+  height: 95px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+}
+
+nav a{
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: 'Jaldi', sans-serif;
+}
+
+/* fim do footer */
