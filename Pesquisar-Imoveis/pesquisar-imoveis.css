@@ -5,7 +5,7 @@ body{
 }
 
 .filtros{
-    width: 70%;
+    width: 940px;
     margin: 0 auto;
     font-family: 'Hepta Slab', serif;
     display: flex;
@@ -14,7 +14,7 @@ body{
 .filtro{
     background-color: #EDFBFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 30px;
     margin: 30px 0;
     box-sizing: border-box;
@@ -43,7 +43,7 @@ body{
 
 .filtro-areaConstruida input{
     border: solid 1px #D2D2D2;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 20px;
     padding: 2px 10px;
     font-family: 'Hepta Slab', serif;
@@ -81,7 +81,7 @@ body{
 
 .filtro-bairro select{
     border: solid 1px #D2D2D2;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 30px;
     width: 80%;
     padding: 5px 10px;
@@ -95,7 +95,7 @@ body{
 
 .filtro-cidade input{
     border: solid 1px #D2D2D2;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 30px;
     width: 60%;
     padding: 5px 10px;
@@ -105,12 +105,12 @@ body{
 .bt-filtrar{
     display: block;
     width: 300px;
-    height: 30px;
+    height: 35px;
     margin: 0px auto 50px auto;
     color: #fff;
     background-color: #00ACD7;
     border: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -118,6 +118,24 @@ body{
 .bt-filtrar:hover{
     background-color: #036d88;
     cursor: pointer;
+}
+
+.qtdImoveis{
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.texto-informacoes{
+    font-family: 'Hepta Slab', serif;
+    color: #036d88;
+    font-size: 1.1em;
+}
+
+.imoveis{
+    width: 940px;
+    margin: 0 auto;
 }
 
 
@@ -128,11 +146,11 @@ body{
     display: flex;
     align-items: center;
 
-    border-radius: 10px;
-    border: solid 3px #00ACD7;
-    width: 70%;
+    /* border-radius: 10px; */
+    border: solid 2px #00ACD7;
+    width: 100%;
 
-    margin: 10px auto;
+    margin: 10px 0;
 
     transition: 0.2s all;
 
@@ -141,7 +159,7 @@ body{
 
 .imovel:hover{
     transform: translateX(10px);
-    border: 3px solid #036d88;
+    border: 2px solid #036d88;
     cursor: pointer;
 }
 
@@ -161,7 +179,7 @@ body{
 
 .img-imovel{
     height: 150px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: 0.2s all;
 }
 
@@ -184,7 +202,7 @@ body{
     background-color: #00ACD7;
     width: 100px;
     padding: 10px;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     position: fixed;
     bottom: 60px;
     right: 60px;

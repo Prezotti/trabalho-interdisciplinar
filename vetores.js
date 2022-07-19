@@ -46,12 +46,16 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
     var imoveis = document.querySelector(".imoveis");
     imoveis.innerText = ""; //Limpa toda section atribuindo uma string vazia pra ela
 
+    var contadorImoveis = 0;
+
     for(let i = 0; i < tipo.length; i++){
 
         if ( (areaC[i] >= filtroArea[0] &&  ((areaC[i] <= filtroArea[1]) || filtroArea[1] == 0)) // A área tem que ser maior que o mínimo e menor que o máximo, ou só maior que o mínimo
             && (tipoImovel.indexOf(tipo[i]) > -1 || tipoImovel.length == 0) // tipoImovel.indexOf(tipo[i]) retorna true se o tipo[i] está contido no vetor tipoImovel ou false quando não está
             && (filtroCidade == cidade[i] || filtroCidade == "Todas")
             && (filtroBairro == bairro[i] || filtroBairro == "Todos")){
+
+        contadorImoveis += 1;
 
         var imovel = document.createElement("div");
         imovel.classList.add("imovel");
@@ -94,6 +98,14 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
         imoveis.appendChild(imovel)
         }
     }
+
+    var qtdImoveis = document.querySelector(".qtdImoveis");
+    qtdImoveis.innerText = "";
+    var textoInformacoes = document.createElement("p");
+    textoInformacoes.textContent = contadorImoveis + " imóveis encontrados com essas especificações!";
+    textoInformacoes.classList.add("texto-informacoes");
+    qtdImoveis.appendChild(textoInformacoes);
+
 }
 
 
