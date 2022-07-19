@@ -12,8 +12,21 @@
     <!-- <body> -->
 
     <header>
-
+        <section class="box-header">
+            <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
+            
+            <nav class="menu-header">
+                <a href="../Home/home.html">Home</a>
+                <a href="#top-pesquisa">Pesquisar Imóveis</a>
+                <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar Imóvel</a>
+                <a href="../Contato/contato.html">Contato</a>
+            </nav>
+    
+        </section>
+        
     </header>
+
+    <div id="top-pesquisa"></div>
 
     <main>
 
@@ -68,12 +81,15 @@
 
         </section>
         
-        <input class="bt-filtrar" id="btFiltrar" type="submit" value="Filtrar imóveis">
+        <div class="botoes">
+            <input class="bt bt-filtrar" id="btFiltrar" type="submit" value="Filtrar imóveis">
+            <input class="bt bt-Limpar" id="btLimpar" type="button" value="Limpar Filtros">
+        </div>
 
         <div class="qtdImoveis">
 
         </div>
-        
+
         <section class="imoveis">
 
             
@@ -90,14 +106,27 @@
 
         </section>
 
-        <img src="../imagens-site/icon-borracha.png" class="limpa-filtros" onclick="limparFiltros()">
-        <span class="ajuda">Limpar Filtros</span>
+        <!-- <img src="../imagens-site/icon-borracha.png" class="limpa-filtros" onclick="limparFiltros()">
+        <span class="ajuda">Limpar Filtros</span> -->
 
     </main>
 
     <footer>
 
-    </footer>
+        <section class="box-footer">
+    
+          <img src="../imagens-site/logo-parcial-negativa.png" class="logo-footer">
+    
+          <nav class="menu-footer">
+            <a href="../Home/home.html">Home</a>
+            <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar-Imoveis</a>
+            <a href="#top-pesquisa">Pesquisar-Imoveis</a>
+            <a href="../Contato/contato.html">Contato</a>
+          </nav>
+    
+        </section>
+    
+      </footer>
     
     <script src="../vetores.js"></script>
 </body>

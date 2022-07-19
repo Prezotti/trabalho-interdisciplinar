@@ -123,6 +123,7 @@ var inBairro = document.getElementById("inBairro");
 var inCidade = document.getElementById("inCidade");
 
 var btFiltrar = document.getElementById("btFiltrar");
+var btLimpar = document.getElementById("btLimpar");
 
 function filtrarImoveis(){
 
@@ -206,4 +207,5 @@ function limparFiltros(){
 }
 
 btFiltrar.addEventListener("click", filtrarImoveis);
+btLimpar.addEventListener("click", limparFiltros);
 inBairro.addEventListener("focus", conferirBairros);

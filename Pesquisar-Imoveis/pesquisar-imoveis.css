@@ -1,8 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Jaldi&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #f5fcfd;
 }
+
+/* Header */
+.menu-header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #062E38;
+    margin: 0 15px;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 18px;
+  }
+  
+  .logo {
+    height: 25px;
+   
+  }
+  
+  header{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: #FAFEFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .box-header {
+    height: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+  }
+  /* fim do header */
+  
+  #top-pesquisa{
+    height: 50px;
+  }
 
 .filtros{
     width: 940px;
@@ -12,7 +55,7 @@ body{
 }
 
 .filtro{
-    background-color: #EDFBFF;
+    background-color: #d6f4fc;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     /* border-radius: 10px; */
     padding: 30px;
@@ -102,11 +145,16 @@ body{
     font-family: 'Hepta Slab', serif;
 }
 
-.bt-filtrar{
-    display: block;
-    width: 300px;
+.botoes{
+    margin: 10px auto 100px auto;
+    width: 700px;
+    text-align: center;
+}
+
+.bt{
+    margin: 0 5px;
+    width: 250px;
     height: 35px;
-    margin: 0px auto 50px auto;
     color: #fff;
     background-color: #00ACD7;
     border: none;
@@ -115,8 +163,8 @@ body{
     font-weight: bold;
 }
 
-.bt-filtrar:hover{
-    background-color: #036d88;
+.bt:hover{
+    background-color: #2d849c;
     cursor: pointer;
 }
 
@@ -183,7 +231,7 @@ body{
     transition: 0.2s all;
 }
 
-.limpa-filtros{
+/* .limpa-filtros{
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -202,7 +250,7 @@ body{
     background-color: #00ACD7;
     width: 100px;
     padding: 10px;
-    /* border-radius: 4px; */
+    border-radius: 4px;
     position: fixed;
     bottom: 60px;
     right: 60px;
@@ -210,4 +258,36 @@ body{
 
   .limpa-filtros:hover ~ .ajuda{
     display: block;
+  } */
+
+  /* início do footer */
+.menu-footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 18px;
   }
+  
+  .logo-footer {
+    height: 40px;
+  }
+  
+  footer{
+    height: 70px;
+    width: 100%;
+    background-color: #118CAB;
+    display: flex;
+    margin-top: 100px;
+  }
+  .box-footer{
+    height: 70px;
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  /* fim do footer */
