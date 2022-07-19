@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hubballi&family=Jaldi&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #f5fcfd;
+}
+
 /* Header */
 .menu-header a {
   text-transform: uppercase;
@@ -40,6 +48,22 @@ header{
 }
 
 /* main */
+
+main {
+  margin-top: 100px;
+}
+.div-contato{
+  font-family: 'Jaldi', sans-serif;
+
+}
+.contato-preencher {
+  font-family: 'Jaldi', sans-serif;
+  font-size: 1.5em;
+}
+.contato-checked {
+  font-family: 'Jaldi', sans-serif;
+  font-size: 1.5em;
+}
 /* fim do main */
 
 /* início do footer */
@@ -51,6 +75,12 @@ header{
   font-family: 'Jaldi', sans-serif;
   font-size: 18px;
 }
+.menu-footer :hover {
+  transition: all 0.4s ;
+  transform: scale3d(1.3px);
+  color: rgb(167, 211, 255);
+}
+
 
 .logo-footer {
   height: 40px;
