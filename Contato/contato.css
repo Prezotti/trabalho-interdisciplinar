@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hubballi&family=Jaldi&display=swap');
+
+/* Header */
+.menu-header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #062E38;
+  margin: 0 15px;
+  font-family: 'Jaldi', sans-serif;
+  font-size: 18px;
+}
+
+.logo {
+  height: 25px;
+ 
+}
+
+header{
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background-color: #FAFEFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.box-header {
+  height: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+/* fim do header */
+
+.espacamento{
+  height: 50px;
+}
+
+/* main */
+/* fim do main */
+
+/* início do footer */
+.menu-footer a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  font-family: 'Jaldi', sans-serif;
+  font-size: 18px;
+}
+
+.logo-footer {
+  height: 40px;
+}
+
+footer{
+  height: 70px;
+  width: 100%;
+  background-color: #118CAB;
+  display: flex;
+}
+.box-footer{
+  height: 70px;
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* fim do footer */
