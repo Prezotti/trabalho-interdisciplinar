@@ -1,5 +1,5 @@
 /* fontes */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hubballi&family=Jaldi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hepta+Slab&family=Hubballi&family=Jaldi&display=swap');
 
 
 nav a {
@@ -55,10 +55,28 @@ main {
     
     
 }
+.secundaria {
+    display: flex;
+}
 
 .dreams {
     font-size: 50px;
     text-align: center;
+    text-transform: uppercase;
+    color: #118CAB;
+    font-family: 'Hubballi';
+}
+
+.dreams-escrita {
+    font-family: 'Hepta Slab';
+    font-size: 25px;
+    width: 600px;
+    text-align: center;
+    text-align: justify;
+    margin-top: 100px;
+    line-height: 40px;
+    color: #062E38;
+    
 }
 
 
