@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hubballi&family=Jaldi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -52,18 +53,36 @@ header{
 main {
   margin-top: 100px;
 }
+
+/* Estilizando titulo contato */
+.contato-titulo {
+  font-family: 'Hubballi', cursive;
+  text-transform: uppercase;
+  font-size: 2.4em;
+  margin: 60px auto 40px auto;
+  text-align: center;
+  transition: 0.5s all;
+  color: #118CAB;
+}
+.contato-titulo:hover{
+  transform: scale(1.02);
+}
+/* fim da esilização do titulo contato*/
+
+
 .div-contato{
   font-family: 'Jaldi', sans-serif;
-
+  font-size: 1.5em;
 }
 .contato-preencher {
-  font-family: 'Jaldi', sans-serif;
-  font-size: 1.5em;
+  display: block;
+  font-size: 22px;
+  width: 50%;
+  justify-items: center;
+  align-items: center;
 }
-.contato-checked {
-  font-family: 'Jaldi', sans-serif;
-  font-size: 1.5em;
-}
+
+
 /* fim do main */
 
 /* início do footer */
