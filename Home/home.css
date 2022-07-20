@@ -113,6 +113,36 @@ width: 50px;
     height: 50px;
 }
 
+/* início do footer */
+.menu-footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 18px;
+  }
+  
+  .logo-footer {
+    height: 40px;
+  }
+  
+  footer{
+    height: 70px;
+    width: 100%;
+    background-color: #118CAB;
+    display: flex;
+  }
+  .box-footer{
+    height: 70px;
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  /* fim do footer */
 
 
 
