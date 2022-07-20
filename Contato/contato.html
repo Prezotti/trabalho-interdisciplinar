@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <header>
     <section class="box-header">
       <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
@@ -25,36 +24,75 @@
     </section>
 
   </header>
-
   <main>
+    <div class="form">
+      <div class="contato-titulo">
+        <h1>Entre em Contato</h1>
+      </div>
 
-    <p class="contato-titulo">Entre em contato</p>
-    <div class="div-contato">
-      <section class="contato-preencher">
-        <p>Nome e Sobrenome: 
-        <input type="text" name="preencher" required></p>
-        <p><E-mail>E-mail: </E-mail>
-        <input type="email" name="preencher" required></p>
-        <p>Telefone: 
-        <input type="tel" name="preencher" required></p>
-        <p>Mensagem: </p>
-        <textarea class="area-mensagem" cols="30" rows="10" required></textarea>
-      </section>
+      <div class="input-group">
+        <div class="input-box">
+          <label for="nomeSobrenome">Nome e Sobrenome: </label>
+          <input id="nomeSobrenome" type="text" name="nomeSobrenome" placeholder="Digite seu nome e sobrenome" required>
+        </div>
 
-      <section class="contato-checked">
-        <p class="titulo-checkbox">Motivo da interação: </p>
-        <p><input type="checkbox" name="checkbox"> Avaliando um Produto</p>
-        <p><input type="checkbox" name="checkbox"> Sugestões para melhorias no geral </p>
-        <p><input type="checkbox" name="checkbox"> Problemas em relação a compras </p>
-        <p><input type="checkbox" name="checkbox"> Criticar atendimento </p>
-        <p><input type="checkbox" name="checkbox"> Outros: </p>
-      </section>
+        <div class="input-box">
+          <label for="email">E-mail: </label>
+          <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="input-box">
+          <label for="numero">Celular: </label>
+          <input id="numero" type="tel" name="numero" placeholder="(xx) xxxx-xxxx" required>
+        </div>
+
+        <div class="input-mensagem">
+          <p><label for="mensagem">Mensagem: </label></p>
+          <textarea name="mensagem" id="mensagem" cols="50" rows="12"></textarea>
+        </div>
+      </div>
+
+      <div class="checked-area">
+        <div class="checked-titulo">
+          <h6>Motivo da Interação: </h6>
+        </div>
+
+        <div class="checked-grupo">
+          <div class="inChecked">
+            <input id="avaliarUmProduto" type="radio" name="opcoes">
+            <label for="avaliarUmProduto">Avaliar um produto</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="criticarAtendimento" type="radio" name="opcoes">
+            <label for="criticarAtendimento">Criticar atendimento</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="problemasEmRelacaoACompras" type="radio" name="opcoes">
+            <label for="problemasEmRelacaoACompras">Problemas em relação a compras</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="sugestoesParaMelhoriasNoGeral" type="radio" name="opcoes">
+            <label for="sugestoesParaMelhoriasNoGeral">Sugestões para melhorias no geral</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="outros" type="radio" name="opcoes">
+            <label for="outros">Outros </label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btEnviar">
+        <button><a href="#">Enviar Formulário</a></button>
+      </div>
     </div>
-    <input type="button" class="btEnviar" value="Enviar Formulário">
-
   </main>
 
-  <div class="espacamento">.</div>
+  <div class="espacamento"></div>
 
   <footer>
 
@@ -72,7 +110,6 @@
     </section>
 
   </footer>
-
 </body>
 
 </html>

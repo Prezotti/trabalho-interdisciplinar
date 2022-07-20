@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Hubballi&family=Jaldi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Jaldi&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -51,7 +52,12 @@ header{
 /* main */
 
 main {
-  margin-top: 100px;
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 
 /* Estilizando titulo contato */
@@ -59,7 +65,7 @@ main {
   font-family: 'Hubballi', cursive;
   text-transform: uppercase;
   font-size: 2.4em;
-  margin: 60px auto 40px auto;
+  margin: 9em auto 60px auto;
   text-align: center;
   transition: 0.5s all;
   color: #118CAB;
@@ -70,22 +76,133 @@ main {
 /* fim da esilização do titulo contato*/
 
 
-.div-contato{
+/* estilização form */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9em;
+  box-shadow: 5px 5px 5px 5px #0000001c;
+  padding: 0 2rem 0 2rem;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
   font-family: 'Jaldi', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
-.contato-preencher {
-  display: block;
-  font-size: 22px;
-  width: 50%;
-  justify-items: center;
+.input-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+  border: none;
+}
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+}
+.input-box input:hover {
+  background-color: #e2eaf3;
+}
+.input-box input:focus-visible {
+  outline: 1px solid #118CAB;
+}
+
+.input-mensagem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+  border: none;
+}
+.input-mensagem textarea{
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  outline: none;
+  resize: none;
+}
+.input-mensagem textarea:hover {
+  background-color: #e2eaf3;
+}
+/* fim estilização form */
+
+
+/* estilização checked */
+
+.checked-area {
+  font-family: 'Jaldi', sans-serif;
+}
+.checked-titulo{
+  font-size: 1.3em;
+}
+.checked-grupo {
+  margin-top: 0.6rem;
+  padding: 0 0.5rem;
+}
+
+.inChecked {
+  display: flex;
   align-items: center;
+  margin: 0.6rem 0 0.5rem 0;
+  font-size: 1.1rem;
 }
+
+.inChecked input {
+  margin-right: 0.4rem;
+}
+
+
+
+/* fim estilização checked */
+
+
+
+/* botão */
+
+.btEnviar {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.btEnviar a {
+  text-decoration: none;
+  color: #fff;
+}
+.btEnviar button{
+  margin-top: 1rem;
+  border: none;
+  background-color: #4797ac;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+.btEnviar button:hover {
+  background-color: #118CAB;
+  transition: 0.2s;
+}
+
+/* fim do botão */
+
 
 
 /* fim do main */
 
 /* início do footer */
+footer{
+  height: 70px;
+  width: 100%;
+  background-color: #118CAB;
+  display: flex;
+}
+.box-footer{
+  height: 70px;
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
 .menu-footer a {
   text-transform: uppercase;
   text-decoration: none;
@@ -105,19 +222,5 @@ main {
   height: 40px;
 }
 
-footer{
-  height: 70px;
-  width: 100%;
-  background-color: #118CAB;
-  display: flex;
-}
-.box-footer{
-  height: 70px;
-  width: 940px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
 
 /* fim do footer */
