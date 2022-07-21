@@ -10,24 +10,89 @@
 </head>
 
 <body>
-
   <header>
     <section class="box-header">
-        <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
-        
-        <nav class="menu-header">
-            <a href="../Home/home.html">Home</a>
-            <a href="../Pesquisar-Imoveis/pesquisar-imoveis.html">Pesquisar Imóveis</a>
-            <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar Imóvel</a>
-            <a href="../Contato/contato.html">Contato</a>
-        </nav>
+      <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
+
+      <nav class="menu-header">
+        <a href="../Home/home.html">Home</a>
+        <a href="../Pesquisar-Imoveis/pesquisar-imoveis.html">Pesquisar Imóveis</a>
+        <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar Imóvel</a>
+        <a href="../Contato/contato.html">Contato</a>
+      </nav>
 
     </section>
-    
-</header>
 
-<div class="espacamento">.</div>
-<div id="top-contato"> </div>
+  </header>
+  <main>
+    <div class="form">
+      <div class="contato-titulo">
+        <h1>Entre em Contato</h1>
+      </div>
+
+      <div class="input-group">
+        <div class="input-box">
+          <label for="nomeSobrenome">Nome e Sobrenome: </label>
+          <input id="nomeSobrenome" type="text" name="nomeSobrenome" placeholder="Digite seu nome e sobrenome" required>
+        </div>
+
+        <div class="input-box">
+          <label for="email">E-mail: </label>
+          <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="input-box">
+          <label for="numero">Celular: </label>
+          <input id="numero" type="tel" name="numero" placeholder="(xx) xxxx-xxxx" required>
+        </div>
+
+        <div class="input-mensagem">
+          <p><label for="mensagem">Mensagem: </label></p>
+          <textarea name="mensagem" id="mensagem" cols="50" rows="12"></textarea>
+        </div>
+      </div>
+
+      <div class="checked-area">
+        <div class="checked-titulo">
+          <h6>Motivo da Interação: </h6>
+        </div>
+
+        <div class="checked-grupo">
+          <div class="inChecked">
+            <input id="avaliarUmProduto" type="radio" name="opcoes">
+            <label for="avaliarUmProduto">Avaliar um produto</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="criticarAtendimento" type="radio" name="opcoes">
+            <label for="criticarAtendimento">Criticar atendimento</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="problemasEmRelacaoACompras" type="radio" name="opcoes">
+            <label for="problemasEmRelacaoACompras">Problemas em relação a compras</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="sugestoesParaMelhoriasNoGeral" type="radio" name="opcoes">
+            <label for="sugestoesParaMelhoriasNoGeral">Sugestões para melhorias no geral</label>
+          </div>
+
+          <div class="inChecked">
+            <input id="outros" type="radio" name="opcoes">
+            <label for="outros">Outros </label>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btEnviar">
+        <button><a href="#">Enviar Formulário</a></button>
+      </div>
+    </div>
+  </main>
+
+  <div class="espacamento"></div>
 
   <main></main>
 
@@ -47,7 +112,6 @@
     </section>
 
   </footer>
-
 </body>
 
 </html>
