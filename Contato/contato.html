@@ -18,14 +18,17 @@
         <a href="../Home/home.html">Home</a>
         <a href="../Pesquisar-Imoveis/pesquisar-imoveis.html">Pesquisar Imóveis</a>
         <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar Imóvel</a>
-        <a href="../Contato/contato.html">Contato</a>
+        <a href="#top-contato">Contato</a>
       </nav>
 
     </section>
 
   </header>
+
+  <div id="top-contato">.</div>
+
   <main>
-    <div class="form">
+    <form class="form">
       <div class="contato-titulo">
         <h1>Entre em Contato</h1>
       </div>
@@ -43,7 +46,7 @@
 
         <div class="input-box">
           <label for="numero">Celular: </label>
-          <input id="numero" type="tel" name="numero" placeholder="(xx) xxxx-xxxx" required>
+          <input id="inNumero" type="tel" name="numero" placeholder="(xx) xxxx-xxxx" required>
         </div>
 
         <div class="input-mensagem">
@@ -86,17 +89,11 @@
         </div>
       </div>
 
-      <div class="btEnviar">
-        <button><a href="#">Enviar Formulário</a></button>
-      </div>
-    </div>
+      <input type="submit" class="bt-enviar">
+    </form>
   </main>
 
-  <div class="espacamento"></div>
-
-  <main></main>
-
-<footer>
+  <footer>
 
     <section class="box-footer">
 
@@ -112,6 +109,7 @@
     </section>
 
   </footer>
+  <script src="contato.js"></script>
 </body>
 
 </html>

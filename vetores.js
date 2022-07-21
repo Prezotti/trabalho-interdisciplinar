@@ -14,6 +14,21 @@ var cidade = ['Boituva','Florínea','Sumaré','Suzano','General Salgado','Maced�
 
 var CEP = ['18550-000','19870-000','13177-050','08625-570','15300-000','15620-000','16900-467','06320-070','15225-000','15495-000','19580-000','06192-150','17057-662','18460-000','07400-000','14805-260','16640-000','13280-000','18950-000','11677-123','12948-110','16920-000','14740-000','18620-000','18760-000','13313-201','16790-000','18960-000','13275-615','14955-000','13311-220','02993-000','14708-200','18730-000','13232-297','19990-000','07914-060','13251-563','14781-271','17260-000','14781-208','12870-000','15310-000','12511-220','11250-000','08574-020','18990-000','12955-000','15850-000','13160-000','15260-000','16600-000','18330-000','13476-735','13469-710','14660-000','18590-000','11535-010','13082-624','18745-000','07400-000','14980-000','07863-000','06757-290','07718-055','08550-240','06396-000','14806-309','12570-000','06765-450','18675-000','09980-550','13280-000','05537-070','13860-000','08295-300','15450-000','12570-000','15680-000','14610-000','15160-000','13230-400','13460-000','11538-040','15808-305','13905-714','14406-523','17570-000','06550-000','13150-000','18800-000','06726-110','14420-000','14340-000','08110-000','12904-001','18600-000','13180-000','17240-000','07600-000','15715-000','17602-045','18790-000','18708-800','18160-000','16010-030','15540-000','18360-000','14790-000','12930-000','15170-000','18120-000','11543-730','13222-141','11950-000','15400-000','06223-160','17400-000','13315-000','19802-100','19560-000','17110-000','17830-000','14811-500','15290-000','17120-000','16570-000','15960-000','09450-000','13060-708','19840-000','13088-028','17760-000','16430-000','18220-000','06702-655','11955-000','13770-000','14140-000','15845-000','13059-016','07810-000','12500-320','15480-000','09960-500','02546-000','17511-830','19920-000','14808-518','11582-000','14930-000','18325-000','06162-215','13490-000','14790-000','07941-020','18770-000','18190-000','13495-000','19530-000','15930-000','14770-000','13178-341','13890-000','13295-000','14750-000','17420-000','14300-000','11665-190','13360-000','13902-230','14860-000','11680-000','16350-000','14808-200','14810-822','13054-532','17810-000','08663-300','14711-540','15790-000','14550-000','13632-010','13321-540','08577-020','06425-120','15885-000','16270-000','12630-000','13053-124','06333-330','13550-000'];
 
+var inAreaMinima = document.getElementById("inAreaMinima");
+var inAreaMaxima = document.getElementById("inAreaMaxima");
+
+var cbApartamento = document.getElementById("cbApartamento");
+var cbCasa = document.getElementById("cbCasa");
+var cbSitio = document.getElementById("cbSitio");
+var cbLoja = document.getElementById("cbLoja");
+var cbDuplex = document.getElementById("cbDuplex");
+var cbTerreno = document.getElementById("cbTerreno");
+
+var inBairro = document.getElementById("inBairro");
+var inCidade = document.getElementById("inCidade");
+
+var btFiltrar = document.getElementById("btFiltrar");
+var btLimpar = document.getElementById("btLimpar");
 
 function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){ 
 
@@ -109,21 +124,7 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
 }
 
 
-var inAreaMinima = document.getElementById("inAreaMinima");
-var inAreaMaxima = document.getElementById("inAreaMaxima");
 
-var cbApartamento = document.getElementById("cbApartamento");
-var cbCasa = document.getElementById("cbCasa");
-var cbSitio = document.getElementById("cbSitio");
-var cbLoja = document.getElementById("cbLoja");
-var cbDuplex = document.getElementById("cbDuplex");
-var cbTerreno = document.getElementById("cbTerreno");
-
-var inBairro = document.getElementById("inBairro");
-var inCidade = document.getElementById("inCidade");
-
-var btFiltrar = document.getElementById("btFiltrar");
-var btLimpar = document.getElementById("btLimpar");
 
 function filtrarImoveis(){
 
@@ -141,15 +142,20 @@ function filtrarImoveis(){
 
     if (cbApartamento.checked){
         tipoImovel.push("Apartamento");
-    }if (cbCasa.checked){
+    }
+    if (cbCasa.checked){
         tipoImovel.push("Casa");
-    }if (cbSitio.checked){
+    }
+    if (cbSitio.checked){
         tipoImovel.push("Sítio");
-    }if (cbLoja.checked){
+    }
+    if (cbLoja.checked){
         tipoImovel.push("Loja");
-    }if (cbDuplex.checked){
+    }
+    if (cbDuplex.checked){
         tipoImovel.push("Duplex");
-    }if (cbTerreno.checked){
+    }
+    if (cbTerreno.checked){
         tipoImovel.push("Terreno");
     }
 
