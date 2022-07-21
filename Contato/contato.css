@@ -19,6 +19,10 @@ body{
   font-family: 'Jaldi', sans-serif;
   font-size: 18px;
 }
+.menu-header a:hover{
+  transition: 0.4s;
+  color: #7d9abb;
+}
 
 .logo {
   height: 25px;
