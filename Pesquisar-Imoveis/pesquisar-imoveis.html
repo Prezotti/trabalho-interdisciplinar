@@ -4,13 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style-geral.css">
     <link rel="stylesheet" href="pesquisar-imoveis.css">
     <link rel="icon" type="imagem/png" href="../imagens-site/logo-parcial-negativa.png" />
     <title>Dreams - Imobiliaria</title>
 </head>
 <body onload="javascript:carregarImoveis([0, 0], [], 'Todas', 'Todos'),conferirCidades()">
     <!-- <body> -->
-
+        
     <header>
         <section class="box-header">
             <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
@@ -18,7 +19,6 @@
             <nav class="menu-header">
                 <a href="../Home/home.html">Home</a>
                 <a href="#top-pesquisa">Pesquisar Imóveis</a>
-                <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar Imóvel</a>
                 <a href="../Contato/contato.html">Contato</a>
             </nav>
     
@@ -73,8 +73,10 @@
 
                 <div class="filtro filtro-areaConstruida">
                     <h2>Área construida</h2>
-                    <label>Mínimo<input id="inAreaMinima" type="number"></label>
-                    <label>Máximo<input id="inAreaMaxima" type="number"></label>
+                    <label for="inAreaMinima">Mínimo</label>
+                    <input id="inAreaMinima" type="number">
+                    <label for inAreaMaxima>Máximo</label>
+                    <input id="inAreaMaxima" type="number">
                 </div>
 
             </div>
@@ -119,7 +121,6 @@
     
           <nav class="menu-footer">
             <a href="../Home/home.html">Home</a>
-            <a href="../Adicionar-Imoveis/adicionar-imoveis.html">Adicionar-Imoveis</a>
             <a href="#top-pesquisa">Pesquisar-Imoveis</a>
             <a href="../Contato/contato.html">Contato</a>
           </nav>
