@@ -4,12 +4,9 @@ var formOfertas = document.querySelector(".form-ofertas");
 
 function mostrarArea() {
   if (rbOfertas.checked) {
-    formOfertas.classList.remove("desaparecendo");
-    formOfertas.classList.add("aparecendo");
+    formOfertas.style.display = "block"
   } else {
-    formOfertas.classList.remove("aparecendo");
-    formOfertas.classList.add("desaparecendo");
+    formOfertas.style.display = "none"
   }
-  console.log(rbOfertas.checked);
 }
 rbOfertas.addEventListener("change", mostrarArea);

@@ -150,15 +150,9 @@ main{
 
 /* fim do botão */
 
-
-
-/* fim do main */
-
-.desaparecendo{
+.form-ofertas{
   display: none;
 }
 
-.aparecendo{
-  display: block;
-}
+/* fim do main */
 
