@@ -99,6 +99,12 @@ body{
     width: 100%;
 }
 
+.erro-bairro{
+    display: none;
+    color: red;
+    font-size: 0.8em;
+}
+
 .filtro-bairro select{
     font-family: 'Hepta Slab', serif;
     height: 30px;

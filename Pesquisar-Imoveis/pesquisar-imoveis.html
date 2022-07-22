@@ -9,7 +9,7 @@
     <link rel="icon" type="imagem/png" href="../imagens-site/logo-parcial-negativa.png" />
     <title>Dreams - Imobiliaria</title>
 </head>
-<body onload="javascript:carregarImoveis([0, 0], [], 'Todas', 'Todos'),conferirCidades()">
+<body onload="javascript:conferirCidades(),carregarImoveis([0, 0], [], 'Todas', 'Todos')">
     <!-- <body> -->
         
     <header>
@@ -67,8 +67,9 @@
                 <div class="filtro filtro-bairro">
                     <h2>Bairro</h2>
                     <select id="inBairro">
-                        <option value="Todos">Todos</option>
+                        <option value="Todos">Todos</option>                    
                     </select>
+                    <span class="erro-bairro">*Selecione uma cidade</span>
                 </div>
 
                 <div class="filtro filtro-areaConstruida">
@@ -107,9 +108,6 @@
             </div> -->
 
         </section>
-
-        <!-- <img src="../imagens-site/icon-borracha.png" class="limpa-filtros" onclick="limparFiltros()">
-        <span class="ajuda">Limpar Filtros</span> -->
 
     </main>
 

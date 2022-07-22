@@ -68,7 +68,7 @@ function carregarImoveis(filtroArea, tipoImovel, filtroCidade, filtroBairro){
 
         if ( (areaC[i] >= filtroArea[0] &&  ((areaC[i] <= filtroArea[1]) || filtroArea[1] == 0)) // A área tem que ser maior que o mínimo e menor que o máximo, ou só maior que o mínimo
             && (tipoImovel.indexOf(tipo[i]) > -1 || tipoImovel.length == 0) // tipoImovel.indexOf(tipo[i]) retorna true se o tipo[i] está contido no vetor tipoImovel ou false quando não está
-            && (filtroCidade == cidade[i] || filtroCidade == "Todas")
+            && (filtroCidade.toLowerCase() == cidade[i].toLocaleLowerCase() || filtroCidade == "Todas")
             && (filtroBairro == bairro[i] || filtroBairro == "Todos")){ //Quando atende todos os filtros os elementos HTML são criados e adicionados na página
 
         contadorImoveis += 1;
@@ -173,6 +173,8 @@ function conferirBairros(){
     var select = document.getElementById("inBairro");
     select.innerText = ""; //Remove todas as options antes de adicionar as novas
 
+    var msgErro = document.querySelector(".erro-bairro");
+
     //Cria a option Todos
     var option = document.createElement("option");
     option.value = "Todos";
@@ -181,20 +183,26 @@ function conferirBairros(){
 
     var bairrosDisponiveis = [];
 
-    for(var i = 0; i < bairro.length; i++){
-        if(cidadeSelecionada == cidade[i] || cidadeSelecionada == ""){ //Confere se o bairro corresponde a cidade
-            if (bairrosDisponiveis.indexOf(bairro[i]) == -1){ //confere se esse bairro já foi adicionado
-                bairrosDisponiveis.push(bairro[i]); //Adiciona esse bairro no vetor
+    if (cidadeSelecionada == ""){
+        msgErro.style.display = "block";
+        console.log("Cidade VAZIA");
+    }else{
+        msgErro.style.display = "none";
+        for(var i = 0; i < bairro.length; i++){
+            if(cidadeSelecionada == cidade[i] || cidadeSelecionada == ""){ //Confere se o bairro corresponde a cidade
+                if (bairrosDisponiveis.indexOf(bairro[i]) == -1){ //confere se esse bairro já foi adicionado
+                    bairrosDisponiveis.push(bairro[i]); //Adiciona esse bairro no vetor
 
-                //Cria a option e insere no HTML
-                var option = document.createElement("option");
-                option.value = bairro[i];
-                option.textContent = bairro[i][0].toUpperCase() + bairro[i].substring(1).toLowerCase(); //Mostra o texto com a primeira letra maiúscula
-                select.appendChild(option);
+                    //Cria a option e insere no HTML
+                    var option = document.createElement("option");
+                    option.value = bairro[i];
+                    option.textContent = bairro[i][0].toUpperCase() + bairro[i].substring(1).toLowerCase(); //Mostra o texto com a primeira letra maiúscula
+                    select.appendChild(option);
+                }
+                
             }
-            
         }
-    }
+}
 
 }
 
