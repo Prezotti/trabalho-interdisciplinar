@@ -124,7 +124,6 @@ main{
 }
 
 
-
 /* fim estilização checked */
 
 
@@ -150,7 +149,44 @@ main{
 
 /* fim do botão */
 
+/* Ofertas */
 
+.receberOfertas {
+  font-size: 1.15em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#receberOfertas {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.preferencia-contato{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.titulo-preferencia{
+  margin-bottom: 20px;
+}
+.bt-ofertas {
+  margin: 10px auto;
+  width: 250px;
+  height: 35px;
+  color: #fff;
+  background-color: #febb02;
+  border: none;
+  color: #096075;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bt-ofertas:hover {
+  background-color: #118CAB;
+  transition: 0.2s;
+}
+
+
+/* fim da ofertas */
 
 /* fim do main */
 

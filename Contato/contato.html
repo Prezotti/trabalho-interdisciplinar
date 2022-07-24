@@ -79,16 +79,16 @@
               <label for="problemasEmRelacaoACompras">Problemas em relação a compras</label>
             </div>
 
-            <div class="inChecked">
-              <input id="receberOfertas" type="checkbox" name="opcoes">
-              <label for="receberOfertas">Receber oferta de imóveis</label>
-            </div>
-
+            
             <div class="inChecked">
               <input id="outros" type="radio" name="opcoes">
               <label for="outros">Outros </label>
             </div>
-
+            
+            <div class="inChecked">
+              <input id="receberOfertas" type="checkbox" name="opcoes">
+              <label for="receberOfertas" class="receberOfertas">Receber ofertas de imóveis</label>
+            </div>
           </div>
         </div>
 
@@ -101,12 +101,12 @@
     <section class="section-form form-ofertas desaparecendo">
       <form class="form">
         <div class="contato-titulo">
-          <h1>Entre em Contato</h1>
+          <h1>Ofertas</h1>
         </div>
 
-        <div class="input-group">
+        <!-- <div class="input-group">
           <div class="input-box">
-            <label for="nomeSobrenome">Nome e Sobrenome: </label>
+            <label for="nomeSobrenome">Em que tipo de imóvel você tem interesse? </label>
             <input id="nomeSobrenome" type="text" name="nomeSobrenome" placeholder="Digite seu nome e sobrenome"
               required>
           </div>
@@ -126,43 +126,62 @@
             <p><label for="mensagem">Mensagem: </label></p>
             <textarea name="mensagem" id="mensagem" cols="50" rows="12"></textarea>
           </div>
-        </div>
+        </div> -->
 
         <div class="checked-area">
           <div class="checked-titulo">
-            <h6>Motivo da Interação: </h6>
+            <h6>Em qual tipo de imóveis você tem mais interesse? </h6>
           </div>
 
           <div class="checked-grupo">
             <div class="inChecked">
-              <input id="avaliarUmProduto" type="radio" name="opcoes">
-              <label for="avaliarUmProduto">Avaliar um produto</label>
+              <input id="apartamento" type="radio" name="ofertas">
+              <label for="apartamento">Apartamento </label>
             </div>
 
             <div class="inChecked">
-              <input id="criticarAtendimento" type="radio" name="opcoes">
-              <label for="criticarAtendimento">Criticar atendimento</label>
+              <input id="casa" type="radio" name="ofertas">
+              <label for="casa">Casa </label>
             </div>
 
             <div class="inChecked">
-              <input id="problemasEmRelacaoACompras" type="radio" name="opcoes">
-              <label for="problemasEmRelacaoACompras">Problemas em relação a compras</label>
+              <input id="duplex" type="radio" name="ofertas">
+              <label for="duplex"> Duplex </label>
             </div>
 
             <div class="inChecked">
-              <input id="sugestoesParaMelhoriasNoGeral" type="radio" name="opcoes">
-              <label for="sugestoesParaMelhoriasNoGeral">Sugestões para melhorias no geral</label>
+              <input id="terreno" type="radio" name="ofertas">
+              <label for="terreno">Terreno</label>
             </div>
 
             <div class="inChecked">
-              <input id="outros" type="radio" name="opcoes">
-              <label for="outros">Outros </label>
+              <input id="sitio" type="radio" name="ofertas">
+              <label for="sitio">Sítio </label>
             </div>
 
+            <div class="inChecked">
+              <input id="loja" type="radio" name="ofertas">
+              <label for="loja">Loja </label>
+            </div>
           </div>
         </div>
+        <div class="checked-area preferencia-contato">
+          <div class="checked-titulo titulo-preferencia">
+            <h6>Em qual plataforma prefere ser contatado? </h6>
+          </div>
 
-        <input type="submit" class="bt-enviar">
+          <div class="checked-grupo">
+            <div class="inChecked">
+              <input id="whatsapp" type="radio" name="ofertas">
+              <label for="whatsapp">Whatsapp </label>
+            </div>
+
+            <div class="inChecked">
+              <input id="e-mail" type="radio" name="ofertas">
+              <label for="e-mail">E-mail </label>
+            </div>
+
+        <input type="submit" class="bt-enviar bt-ofertas">
       </form>
     </section>
   </main>
