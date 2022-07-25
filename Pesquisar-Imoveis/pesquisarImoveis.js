@@ -222,9 +222,19 @@ function limparFiltros(){
 
     carregarImoveis([0, 0], [], 'Todas', 'Todos'); //Chama a função com os valores padrões
 }
+function teste () {
+console.log (localStorage.getItem("cidades"))
+console.log (localStorage.getItem("bairros"))
+console.log (localStorage.getItem("ceps"))
+console.log (localStorage.getItem("tipos"))
+console.log (localStorage.getItem("logradouros"))
+console.log (localStorage.getItem("areasC"))
+console.log (localStorage.getItem("areasT"))
 
-
+}
+var btTeste= document.getElementById ("btTeste")
 // Listeners
 btFiltrar.addEventListener("click", filtrarImoveis);
 btLimpar.addEventListener("click", limparFiltros);
 inBairro.addEventListener("focus", conferirBairros);
+btTeste.addEventListener ("click", teste);
