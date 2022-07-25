@@ -9,7 +9,7 @@
   <link rel="icon" type="imagem/png" href="../imagens-site/logo-parcial-negativa.png" />
   <title>Dreams - Imobiliaria</title>
 </head>
-<body>
+<body onload="javascript:criaCookies()">
   <header>
     <section class="box-header">
         <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
@@ -30,18 +30,20 @@
 <main>
 
   <h1 class="titulo-anunciar">Anuncie seu imóvel</h1>
-  <section class="filtros">
+  <form>
+    <section  class="filtros">
             
     <div class="filtro-esquerda">
 
         <div class="filtro filtro-localizacao">
-            <h2>Cidade</h2>
-            <input type="text" id="inCidade" required>
+            <h2>Localização</h2>
+            <div class="cidade">
+              <label>Cidade<input type="text" id="inCidade" required></label>
+            </div>   
             <div class="endereco">
-              <h2>Rua</h2>
-              <input type="text" id="inRua" required>
-              <h2>Número</h2>
-              <input type="number" id="inNumero" required>
+              <label>Rua<input type="text" id="inRua" required></label>           
+              <label>Número<input type="number" id="inNumero" required></label>
+              
           </div>
         </div>
 
@@ -68,26 +70,33 @@
     <div class="filtro-direita">
 
         <div class="filtro filtro-bairro" >
-            <h2>Bairro</h2>
-            <input type="text" id="inBairro" required>
-            <h2>CEP</h2>
-            <input type="text" id="inCep" required>
+            <div>
+              <label for="inBairro">Bairro</label>
+              <input type="text" id="inBairro" required>
+            </div>
+            <div>
+              <label for="inCep">CEP</label>
+              <input type="text" id="inCep" required>
+            </div>
         </div>
 
         <div class="filtro filtro-areaConstruida">
             <h2>Área</h2>
             <label for="inAreaConstruida">Área Construida</label>
-            <input id="inAreaConstruida" type="number">
+            <input id="inAreaConstruida" type="number" required>
             <label for="inAreaTotal">Área Total</label>
-            <input id="inAreaTotal" type="number">
+            <input id="inAreaTotal" type="number" required>
         </div>
 
     </div>
+    </section>
+    <div class="botoes">
+      <input class="bt bt-adicionar" id="btAdicionar" type="submit" value="Anunciar imóvel">
+    </div>
+  </form>
 
-</section>
-<div class="botoes">
-  <input class="bt bt-adicionar" id="btAdicionar" type="submit" value="Anunciar imóvel">
-</div>
+  
+
 </main>
 
 <footer>
