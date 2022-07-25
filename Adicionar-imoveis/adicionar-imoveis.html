@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="../style-geral.css">
+  <link rel="stylesheet" href="adicionar-imoveis.css">
+  <link rel="icon" type="imagem/png" href="../imagens-site/logo-parcial-negativa.png" />
+  <title>Dreams - Imobiliaria</title>
+</head>
+<body>
+  <header>
+    <section class="box-header">
+        <img src="../imagens-site/logo-positivo.png" class="logo" alt="">
+        
+        <nav class="menu-header">
+            <a href="../Home/home.html">Home</a>
+            <a href="#top-adicionar">Adicionar Imóveis</a>
+            <a href="../Pesquisar-Imoveis/pesquisar-imoveis.html">Pesquisar Imóveis</a>
+            <a href="../Contato/contato.html">Contato</a>
+        </nav>
+
+    </section>
+    
+</header>
+
+<div id="top-adicionar"></div>
+
+<main>
+
+  <h1 class="titulo-anunciar">Anuncie seu imóvel</h1>
+  <section class="filtros">
+            
+    <div class="filtro-esquerda">
+
+        <div class="filtro filtro-localizacao">
+            <h2>Cidade</h2>
+            <input type="text" id="inCidade" required>
+            <div class="endereco">
+              <h2>Rua</h2>
+              <input type="text" id="inRua" required>
+              <h2>Número</h2>
+              <input type="number" id="inNumero" required>
+          </div>
+        </div>
+
+        <div class="filtro filtro-tipoImovel">
+            <h2>Tipo do imóvel</h2>
+            <div class="filtro-opcoes">
+                <div class="opcoes-dupla">
+                    <label><img src="../imagens-site/icon-apartamento.png" class="icon-filtro"><input id="rbApartamento" type="radio" name="tipo-imovel">Apartamento</label>
+                    <label><img src="../imagens-site/icon-casa.png" class="icon-filtro"><input id="rbCasa" type="radio" name="tipo-imovel">Casa</label>
+                </div>
+                <div class="opcoes-dupla">
+                    <label><img src="../imagens-site/icon-cabin.png" class="icon-filtro"><input id="rbSitio" type="radio" name="tipo-imovel">Sítio</label>
+                    <label><img src="../imagens-site/icon-loja.png" class="icon-filtro"><input id="rbLoja" type="radio" name="tipo-imovel">Loja</label>
+                </div>                 
+                <div class="opcoes-dupla">
+                    <label><img src="../imagens-site/icon-duplex.png" class="icon-filtro"><input id="rbDuplex" type="radio" name="tipo-imovel">Duplex</label>
+                    <label><img src="../imagens-site/icon-plot.png" class="icon-filtro"><input id="rbTerreno" type="radio" name="tipo-imovel">Terreno</label>
+                </div>
+            </div>
+        </div>               
+
+    </div>
+
+    <div class="filtro-direita">
+
+        <div class="filtro filtro-bairro" >
+            <h2>Bairro</h2>
+            <input type="text" id="inBairro" required>
+            <h2>CEP</h2>
+            <input type="text" id="inCep" required>
+        </div>
+
+        <div class="filtro filtro-areaConstruida">
+            <h2>Área</h2>
+            <label for="inAreaConstruida">Área Construida</label>
+            <input id="inAreaConstruida" type="number">
+            <label for="inAreaTotal">Área Total</label>
+            <input id="inAreaTotal" type="number">
+        </div>
+
+    </div>
+
+</section>
+<div class="botoes">
+  <input class="bt bt-adicionar" id="btAdicionar" type="submit" value="Anunciar imóvel">
+</div>
+</main>
+
+<footer>
+
+  <section class="box-footer">
+
+    <img src="../imagens-site/logo-parcial-negativa.png" class="logo-footer">
+
+    <nav class="menu-footer">
+      <a href="../Home/home.html">Home</a>
+      <a href="#top-pesquisa">Pesquisar-Imoveis</a>
+      <a href="../Contato/contato.html">Contato</a>
+    </nav>
+
+  </section>
+
+</footer>
+
+<script src="adicionar-imoveis.js"></script>
+  
+</body>
+</html>
