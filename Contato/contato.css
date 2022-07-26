@@ -106,6 +106,7 @@ main{
 }
 .checked-titulo{
   font-size: 1em;
+  margin: 20px 0 20px 0;
 }
 .checked-grupo {
   margin-top: 0.9rem;
@@ -122,7 +123,6 @@ main{
 .inChecked input {
   margin-right: 0.4rem;
 }
-
 
 /* fim estilização checked */
 
@@ -162,12 +162,43 @@ main{
 }
 
 .preferencia-contato{
-  margin-top: 30px;
   margin-bottom: 20px;
 }
-.titulo-preferencia{
-  margin-bottom: 20px;
+.selecionar-ofertas {
+  margin: 5px 0 10px 0;
+  font-size: 0.9rem ;
 }
+.cidade-estado-ofertas{
+  margin: 0 0 15px 10px;
+}
+
+.selecao-cidade-estado select{
+  font-family: 'Hepta Slab', serif;
+  height: 30px;
+  width: 80%;
+  border: 1px solid #00000000;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 10px 1px #0000001c;
+}
+.selecao-cidade-estado  select:focus {
+  outline: 0;
+  border: 1px solid #febb02;
+} 
+.selecao-cidade-estado input {
+  font-family: 'Hepta Slab', serif;
+  width: 75.2%;
+  border: 1px solid #00000000;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 10px 1px #0000001c;
+}
+.selecao-cidade-estado input:focus {
+  outline: 0;
+  border: 1px solid #febb02;
+}
+.selecao-cidade-estado p {
+  margin-left: 10px;
+}
+
 .bt-ofertas {
   margin: 10px auto;
   width: 250px;
@@ -184,6 +215,8 @@ main{
   background-color: #118CAB;
   transition: 0.2s;
 }
+
+
 
 
 /* fim da ofertas */

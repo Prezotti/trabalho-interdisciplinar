@@ -79,12 +79,12 @@
               <label for="problemasEmRelacaoACompras">Problemas em relação a compras</label>
             </div>
 
-            
+
             <div class="inChecked">
               <input id="outros" type="radio" name="opcoes">
               <label for="outros">Outros </label>
             </div>
-            
+
             <div class="inChecked">
               <input id="receberOfertas" type="checkbox" name="opcoes">
               <label for="receberOfertas" class="receberOfertas">Receber ofertas de imóveis</label>
@@ -98,7 +98,7 @@
 
     <div id="top-contato">.</div>
 
-    <section class="section-form form-ofertas desaparecendo">
+    <section class="section-form form-ofertas">
       <form class="form">
         <div class="contato-titulo">
           <h1>Ofertas</h1>
@@ -130,37 +130,37 @@
 
         <div class="checked-area">
           <div class="checked-titulo">
-            <h6>Em qual tipo de imóveis você tem mais interesse? </h6>
+            <h6>Em quais tipos de imóveis você tem mais interesse? </h6>
           </div>
 
           <div class="checked-grupo">
             <div class="inChecked">
-              <input id="apartamento" type="radio" name="ofertas">
+              <input id="apartamento" type="checkbox" name="ofertas">
               <label for="apartamento">Apartamento </label>
             </div>
 
             <div class="inChecked">
-              <input id="casa" type="radio" name="ofertas">
+              <input id="casa" type="checkbox" name="ofertas">
               <label for="casa">Casa </label>
             </div>
 
             <div class="inChecked">
-              <input id="duplex" type="radio" name="ofertas">
+              <input id="duplex" type="checkbox" name="ofertas">
               <label for="duplex"> Duplex </label>
             </div>
 
             <div class="inChecked">
-              <input id="terreno" type="radio" name="ofertas">
+              <input id="terreno" type="checkbox" name="ofertas">
               <label for="terreno">Terreno</label>
             </div>
 
             <div class="inChecked">
-              <input id="sitio" type="radio" name="ofertas">
+              <input id="sitio" type="checkbox" name="ofertas">
               <label for="sitio">Sítio </label>
             </div>
 
             <div class="inChecked">
-              <input id="loja" type="radio" name="ofertas">
+              <input id="loja" type="checkbox" name="ofertas">
               <label for="loja">Loja </label>
             </div>
           </div>
@@ -172,16 +172,60 @@
 
           <div class="checked-grupo">
             <div class="inChecked">
-              <input id="whatsapp" type="radio" name="ofertas">
+              <input id="whatsapp" type="checkbox" name="ofertas">
               <label for="whatsapp">Whatsapp </label>
             </div>
 
             <div class="inChecked">
-              <input id="e-mail" type="radio" name="ofertas">
+              <input id="e-mail" type="checkbox" name="ofertas">
               <label for="e-mail">E-mail </label>
             </div>
+          </div>
+          </div>
 
-        <input type="submit" class="bt-enviar bt-ofertas">
+          <div class="checked-area">
+            <div class="checked-titulo titulo-cidade-estado">
+              <h6>Em que lugar esta sua preferência de imóveis? </h6>
+            </div>
+            <div class="selecao-cidade-estado">
+              <p class="selecionar-ofertas">Selecione um estado: </p>
+              <select name="estado" class="cidade-estado-ofertas">
+                  <option value="">Selecione um estado </option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                </select>
+              <p class="selecionar-ofertas">Digite a cidade desejada: </p>
+              <input type="text" class="cidade-estado-ofertas">
+            </div>
+          </div>
+          
+          <input type="submit" class="bt-enviar bt-ofertas">
       </form>
     </section>
   </main>
