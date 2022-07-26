@@ -45,8 +45,6 @@ function carregarNovosImoveis() {
         var areasC = localStorage.areasC.split(",");
         var areasT = localStorage.areasT.split(",");
 
-        console.log(cidades)
-
         for (var i = 0; i < cidades.length; i++) {
             cidade.push(cidades[i]);
             bairro.push(bairros[i]);
@@ -212,7 +210,6 @@ function conferirBairros() {
 
     if (cidadeSelecionada == "") {
         msgErro.style.display = "block";
-        console.log("Cidade VAZIA");
     } else {
         msgErro.style.display = "none";
         for (var i = 0; i < bairro.length; i++) {
