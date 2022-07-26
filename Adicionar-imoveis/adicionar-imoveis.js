@@ -62,6 +62,7 @@ function adicionarImovel() {
   var cep = inCep.value;
   var areaC = inAreaConstruida.value;
   var areaT = inAreaTotal.value;
+  var tipo = "";
 
   if(cidade != "" && rua != "" && numero != "" && bairro != "" && cep != "" && areaC != "" && areaT != ""
   &&  (ehApartamento || ehCasa || ehSitio || ehDuplex || ehTerreno || ehLoja) ){
@@ -75,33 +76,43 @@ function adicionarImovel() {
     areasT.push(areaT);
   
     if (ehApartamento) {
-      tipos.push("Apartamento");
+      tipo = "Apartamento";
     } else if (ehCasa) {
-      tipos.push("Casa");
+      tipo = "Casa";
     } else if (ehSitio) {
-      tipos.push("Sitio");
+      tipo = "Sitio";
     } else if (ehDuplex) {
-      tipos.push("Duplex");
+      tipo = "Duplex";
     } else if (ehTerreno) {
-      tipos.push("Terreno");
+      tipo = "Terreno";
     } else {
-      tipos.push("Loja");
+      tipo = "Loja";
     }
 
-    localStorage.setItem("cidades", cidades);
-    localStorage.setItem("ceps", ceps);
-    localStorage.setItem("ruas", ruas);
-    localStorage.setItem("numeros", numeros);
-    localStorage.setItem("bairros", bairros);
-    localStorage.setItem("tipos", tipos);
-    localStorage.setItem("areasC", areasC);
-    localStorage.setItem("areasT", areasT);
+    localStorage.cidades = cidade;
+    localStorage.ceps = ceps;
+    localStorage.ruas = ruas;
+    localStorage.numeros = numeros;
+    localStorage.bairros = bairros;
+    localStorage.tipos = tipos;
+    localStorage.areasC = areasC;
+    localStorage.areasT = areasT;
 
-    //Criar elemento "Imovel adicionado com sucesso"
+    var msgSucesso = document.querySelector(".msg-sucesso");
+    msgSucesso.innerText = "";
+    var textoInformacoes = document.createElement("p");
+    textoInformacoes.textContent = "Imóvel adicionado com sucesso!";
+    textoInformacoes.classList.add("texto-informacoes");
+    msgSucesso.appendChild(textoInformacoes);
   
+  }else{
+    var msgSucesso = document.querySelector(".msg-sucesso");
+    msgSucesso.innerText = "";
+    var textoInformacoes = document.createElement("p");
+    textoInformacoes.textContent = "Imóvel não foi adicionado com sucesso!";
+    textoInformacoes.classList.add("texto-informacoes");
+    msgSucesso.appendChild(textoInformacoes);
   }
-
-  //Criar o erro
 
 }
 
