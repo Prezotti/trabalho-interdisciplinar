@@ -23,7 +23,7 @@ var numeros;
 var ruas;
 
 function criaCookies(){
-  if (localStorage.cidades != null && localStorage.bairros != null && localStorage.tipos != null && localStorage.ceps != null
+  if (localStorage.cidades != null && localStorage.bairros != null && (localStorage.tipos != null && localStorage.tipos != "") && localStorage.ceps != null
     && localStorage.areasC != null && localStorage.areasT != null && localStorage.numeros != null && localStorage.ruas != null){
     cidades = localStorage.cidades.split(",");
     bairros = localStorage.bairros.split(",");
@@ -88,8 +88,10 @@ function adicionarImovel() {
     } else {
       tipo = "Loja";
     }
+    tipos.push(tipo);
 
-    localStorage.cidades = cidade;
+
+    localStorage.cidades = cidades;
     localStorage.ceps = ceps;
     localStorage.ruas = ruas;
     localStorage.numeros = numeros;
@@ -109,7 +111,7 @@ function adicionarImovel() {
     var msgSucesso = document.querySelector(".msg-sucesso");
     msgSucesso.innerText = "";
     var textoInformacoes = document.createElement("p");
-    textoInformacoes.textContent = "Imóvel não foi adicionado com sucesso!";
+    textoInformacoes.textContent = "Imóvel não foi adicionado!";
     textoInformacoes.classList.add("texto-informacoes");
     msgSucesso.appendChild(textoInformacoes);
   }

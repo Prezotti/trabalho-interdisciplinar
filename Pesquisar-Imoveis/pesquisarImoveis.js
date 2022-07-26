@@ -45,6 +45,8 @@ function carregarNovosImoveis() {
         var areasC = localStorage.areasC.split(",");
         var areasT = localStorage.areasT.split(",");
 
+        console.log(cidades)
+
         for (var i = 0; i < cidades.length; i++) {
             cidade.push(cidades[i]);
             bairro.push(bairros[i]);
