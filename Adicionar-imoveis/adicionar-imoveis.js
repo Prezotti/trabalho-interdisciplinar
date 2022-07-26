@@ -22,11 +22,12 @@ var areasT;
 var numeros;
 var ruas;
 
+//Função para criar os locais de armazenamento caso não estejam criados
 function criaCookies(){
-  if (localStorage.cidades != null && localStorage.bairros != null && (localStorage.tipos != null && localStorage.tipos != "") && localStorage.ceps != null
+  if (localStorage.cidades != null && localStorage.bairros != null && localStorage.tipos != null && localStorage.ceps != null
     && localStorage.areasC != null && localStorage.areasT != null && localStorage.numeros != null && localStorage.ruas != null){
     cidades = localStorage.cidades.split(",");
-    bairros = localStorage.bairros.split(",");
+    bairros = localStorage.bairros.split(","); //Caso ja tenha informação armazenada é criado um vetor com os elementos que estavam armazenados
     tipos = localStorage.tipos.split(",");
     ceps = localStorage.ceps.split(",");
     areasC = localStorage.areasC.split(",");
@@ -64,10 +65,10 @@ function adicionarImovel() {
   var areaT = inAreaTotal.value;
   var tipo = "";
 
-  if(cidade != "" && rua != "" && numero != "" && bairro != "" && cep != "" && areaC != "" && areaT != ""
+  if(cidade != "" && rua != "" && numero != "" && bairro != "" && cep != "" && areaC != "" && areaT != ""  //Verifica se tudo está preenchido para executar o código
   &&  (ehApartamento || ehCasa || ehSitio || ehDuplex || ehTerreno || ehLoja) ){
     
-    cidades.push(cidade);
+    cidades.push(cidade); //faz o push em vetores para guardar as novas informações
     ceps.push(cep);
     ruas.push(rua);
     numeros.push(numero);
@@ -91,7 +92,7 @@ function adicionarImovel() {
     tipos.push(tipo);
 
 
-    localStorage.cidades = cidades;
+    localStorage.cidades = cidades; //Adiciona o vetor no localStorage
     localStorage.ceps = ceps;
     localStorage.ruas = ruas;
     localStorage.numeros = numeros;
@@ -100,7 +101,7 @@ function adicionarImovel() {
     localStorage.areasC = areasC;
     localStorage.areasT = areasT;
 
-    var msgSucesso = document.querySelector(".msg-sucesso");
+    var msgSucesso = document.querySelector(".msg-sucesso"); //Mensagem de sucesso é criada
     msgSucesso.innerText = "";
     var textoInformacoes = document.createElement("p");
     textoInformacoes.textContent = "Imóvel adicionado com sucesso!";
@@ -108,7 +109,7 @@ function adicionarImovel() {
     msgSucesso.appendChild(textoInformacoes);
   
   }else{
-    var msgSucesso = document.querySelector(".msg-sucesso");
+    var msgSucesso = document.querySelector(".msg-sucesso"); //Mensagem de Erro é criada
     msgSucesso.innerText = "";
     var textoInformacoes = document.createElement("p");
     textoInformacoes.textContent = "Imóvel não foi adicionado!";
