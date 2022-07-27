@@ -35,6 +35,13 @@ header{
     z-index: 10;
 }
 
+/*hover no header */
+.menu-header a:hover{
+  color: #fdbb02;
+  transition: 0.5s;
+}
+
+
 /* Box de 940px para limitar o header */
 .box-header {
     height: 50px;
@@ -75,5 +82,11 @@ header{
     align-items: center;
     margin: 0 auto;
   }
+
+  /*hover no footer */
+.menu-footer a:hover{
+  color: #fdbb02;
+  transition: 0.5s;
+}
   
   /* fim do footer */
