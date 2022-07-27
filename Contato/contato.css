@@ -19,7 +19,9 @@ main{
   justify-content: center;
 }
 
-
+form-ofertas{
+  display: none;
+}
 
 /* Estilizando titulo contato */
 .contato-titulo {
@@ -47,6 +49,8 @@ main{
   padding: 2rem 5rem 2rem 5rem;
   background-color: #EDFBFF;
 }
+
+/* Estilizando grupo de input */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -71,11 +75,9 @@ main{
  .input-box input:focus {
   outline: 0;
 } 
-
 .input-box input:focus-visible {
   border: 1px solid #febb02;
 }
-
 .input-mensagem {
   display: flex;
   flex-direction: column;
@@ -96,11 +98,12 @@ main{
 .input-mensagem textarea:focus-visible {
   border: 1px solid #febb02;
 }
+/* Fim estilização do gupo de input */
+
 /* fim estilização form */
 
 
 /* estilização checked */
-
 .checked-area {
   font-family: 'Hepta Slab', serif;
 }
