@@ -19,7 +19,9 @@ main{
   justify-content: center;
 }
 
-
+form-ofertas{
+  display: none;
+}
 
 /* Estilizando titulo contato */
 .contato-titulo {
@@ -47,6 +49,8 @@ main{
   padding: 2rem 5rem 2rem 5rem;
   background-color: #EDFBFF;
 }
+
+/* Estilizando grupo de input */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -71,11 +75,9 @@ main{
  .input-box input:focus {
   outline: 0;
 } 
-
 .input-box input:focus-visible {
   border: 1px solid #febb02;
 }
-
 .input-mensagem {
   display: flex;
   flex-direction: column;
@@ -96,16 +98,18 @@ main{
 .input-mensagem textarea:focus-visible {
   border: 1px solid #febb02;
 }
+/* Fim estilização do gupo de input */
+
 /* fim estilização form */
 
 
 /* estilização checked */
-
 .checked-area {
   font-family: 'Hepta Slab', serif;
 }
 .checked-titulo{
   font-size: 1em;
+  margin: 20px 0 20px 0;
 }
 .checked-grupo {
   margin-top: 0.9rem;
@@ -122,8 +126,6 @@ main{
 .inChecked input {
   margin-right: 0.4rem;
 }
-
-
 
 /* fim estilização checked */
 
@@ -150,7 +152,81 @@ main{
 
 /* fim do botão */
 
-.form-ofertas{
+/* Ofertas */
+
+.receberOfertas {
+  font-size: 1.15em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#receberOfertas {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.preferencia-contato{
+  margin-bottom: 20px;
+}
+.selecionar-ofertas {
+  margin: 5px 0 10px 0;
+  font-size: 0.9rem ;
+}
+.cidade-estado-ofertas{
+  margin: 0 0 15px 10px;
+}
+
+.selecao-cidade-estado select{
+  font-family: 'Hepta Slab', serif;
+  height: 30px;
+  width: 80%;
+  border: 1px solid #00000000;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 10px 1px #0000001c;
+}
+.selecao-cidade-estado  select:focus {
+  outline: 0;
+  border: 1px solid #febb02;
+} 
+.selecao-cidade-estado input {
+  font-family: 'Hepta Slab', serif;
+  width: 75.2%;
+  border: 1px solid #00000000;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 10px 1px #0000001c;
+}
+.selecao-cidade-estado input:focus {
+  outline: 0;
+  border: 1px solid #febb02;
+}
+.selecao-cidade-estado p {
+  margin-left: 10px;
+}
+
+.bt-ofertas {
+  margin: 10px auto;
+  width: 250px;
+  height: 35px;
+  color: #fff;
+  background-color: #febb02;
+  border: none;
+  color: #096075;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bt-ofertas:hover {
+  background-color: #118CAB;
+  transition: 0.2s;
+}
+
+
+
+
+/* fim da ofertas */
+
+/* fim do main */
+
+.desaparecendo{
   display: none;
 }
 
