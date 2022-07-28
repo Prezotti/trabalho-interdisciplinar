@@ -1,3 +1,8 @@
+/*
+Autores: Henrique Galvão, Paulo Cezar Borges, Samir Coutinho Borges
+Data: 28/07/2022
+Descrição: Javascript da página de contato.
+*/
 var rbOfertas = document.getElementById("receberOfertas");
 var formOfertas = document.querySelector(".form-ofertas");
 formOfertas.style.display = "none"

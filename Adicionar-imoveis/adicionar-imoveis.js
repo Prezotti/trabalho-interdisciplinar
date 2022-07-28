@@ -1,3 +1,8 @@
+/*
+Autores: Henrique Galvão, Paulo Cezar Borges, Samir Coutinho Borges
+Data: 28/07/2022
+Descrição: Javascript da página de adicionar imóveis
+*/
 var inCidade = document.getElementById("inCidade");
 var inRua = document.getElementById("inRua");
 var inNumero = document.getElementById("inNumero");
@@ -27,7 +32,7 @@ function criaCookies(){
   if (localStorage.cidades != null && localStorage.bairros != null && localStorage.tipos != null && localStorage.ceps != null
     && localStorage.areasC != null && localStorage.areasT != null && localStorage.numeros != null && localStorage.ruas != null){
     cidades = localStorage.cidades.split(",");
-    bairros = localStorage.bairros.split(","); //Caso ja tenha informação armazenada é criado um vetor com os elementos que estavam armazenados
+    bairros = localStorage.bairros.split(","); //Caso ja tenha informação armazenada Cria um vetor com essas informações.
     tipos = localStorage.tipos.split(",");
     ceps = localStorage.ceps.split(",");
     areasC = localStorage.areasC.split(",");
@@ -65,8 +70,8 @@ function adicionarImovel() {
   var areaT = inAreaTotal.value;
   var tipo = "";
 
-  if(cidade != "" && rua != "" && numero != "" && bairro != "" && cep != "" && areaC != "" && areaT != ""  //Verifica se tudo está preenchido para executar o código
-  &&  (ehApartamento || ehCasa || ehSitio || ehDuplex || ehTerreno || ehLoja) ){
+  if(cidade != "" && rua != "" && numero != "" && bairro != "" && cep != "" && areaC != "" && areaT != ""  //Verifica se tudo está 
+  &&  (ehApartamento || ehCasa || ehSitio || ehDuplex || ehTerreno || ehLoja) ){                           //preechido
     
     cidades.push(cidade); //faz o push em vetores para guardar as novas informações
     ceps.push(cep);
@@ -81,7 +86,7 @@ function adicionarImovel() {
     } else if (ehCasa) {
       tipo = "Casa";
     } else if (ehSitio) {
-      tipo = "Sitio";
+      tipo = "Sítio";
     } else if (ehDuplex) {
       tipo = "Duplex";
     } else if (ehTerreno) {

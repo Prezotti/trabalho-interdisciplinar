@@ -87,10 +87,6 @@ body{
   width: 100%;    
 }
 
-.filtro-tipoImovel input:checked{
-  background-color: #febb02;
-}
-
 /* Tipos dos imóveis */
 .filtro-opcoes{
   display: flex;
