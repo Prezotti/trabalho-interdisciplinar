@@ -6,7 +6,7 @@ body{
 }
 
 .titulo-pagina{
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -200,7 +200,7 @@ body{
   width: 940px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   
 }
 
@@ -208,53 +208,4 @@ body{
   font-family: 'Hepta Slab', serif;
   font-size: 1.1em;
   color: #09608B;
-
-}
-
-.imoveis{
-  width: 940px;
-  margin: 0 auto;
-}
-
-
-.imovel{
-  font-family: 'Hepta Slab', serif;
-  padding: 10px;
-
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-
-  margin: 10px 0;
-
-  transition: 0.2s all;
-  
-  background-color: #EDFBFF;
-  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.imovel:hover{
-  transform: translateX(10px);
-  cursor: pointer;
-}
-
-.informacoes-imovel{
-  margin-left: 20px;
-}
-
-.tipo-imovel{
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.tipo-detalhes{
-  margin: 15px 0;
-  font-size: 0.8em;
-}
-
-.img-imovel{
-  height: 150px;
-  /* border-radius: 10px; */
-  transition: 0.2s all;
 }

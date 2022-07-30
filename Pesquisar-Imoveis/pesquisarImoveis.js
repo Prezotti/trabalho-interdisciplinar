@@ -258,3 +258,9 @@ function limparFiltros() {
 btFiltrar.addEventListener("click", filtrarImoveis);
 btLimpar.addEventListener("click", limparFiltros);
 inBairro.addEventListener("focus", conferirBairros);
+
+// Chama essas funções ao carregar a página
+carregarNovosImoveis();
+conferirCidades();
+carregarImoveis([0, 0], [], 'Todas', 'Todos');
+

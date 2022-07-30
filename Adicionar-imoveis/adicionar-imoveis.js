@@ -124,5 +124,9 @@ function adicionarImovel() {
 
 }
 
+// Listener
 btAdicionar.addEventListener("click", adicionarImovel);
+
+// Chama a função ao carregar a página
+criaCookies();
 
