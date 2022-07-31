@@ -36,6 +36,7 @@ var inCidade = document.getElementById("inCidade");
 
 var btFiltrar = document.getElementById("btFiltrar");
 var btLimpar = document.getElementById("btLimpar");
+var btRelatorio = document.getElementById("btRelatorio");
 
 
 function carregarNovosImoveis() {
@@ -252,12 +253,72 @@ function limparFiltros() {
     carregarImoveis([0, 0], [], 'Todas', 'Todos'); //Chama a função com os valores padrões
 }
 
+function gerarRelatorio(){
 
+    var imoveis = document.querySelector(".imoveis");
+    imoveis.innerText = ""; //Limpa toda section .imoveis
+
+    var qtdImoveis = document.querySelector(".qtdImoveis");
+    qtdImoveis.innerText = "";
+
+    //Cria um vetor com as cidades disponíveis
+    var cidadesDisponiveis = [];
+    for (var i = 0; i < cidade.length; i++) {
+        if (cidadesDisponiveis.indexOf(cidade[i]) == -1) { //cidadesDisponiveis.indexOf(cidade[i]) retorna -1 quando não há o elemento no vetor
+            cidadesDisponiveis.push(cidade[i])
+        }
+    }
+    cidadesDisponiveis = cidadesDisponiveis.sort(); //Organiza as cidades em ordem alfabética
+
+    for (let i = 0; i < cidadesDisponiveis.length; i++) { //["Araraquara"]
+
+        var nomeCidade = document.createElement("p");
+        nomeCidade.textContent = "Cidade:" + cidadesDisponiveis[i] + ":";
+        nomeCidade.style.color = "blue";
+        imoveis.appendChild(nomeCidade);
+
+        var bairrosDaCidade = [];
+        var tipoDoBairro = [];
+        var bairrosPossiveis = [];
+        for(var j = 0; j < cidade.length; j++){
+            if(cidade[j] == cidadesDisponiveis[i]){
+                if (bairrosDaCidade.indexOf(bairro[j]) == -1){
+                    bairrosPossiveis.push(bairro[j]); //["Jardim Maria Luiza","Dei","Parque São Paulo","Hortências","Parque Cecap I","Jardim São Rafael I"]
+                }
+                bairrosDaCidade.push(bairro[j]); //["Jardim Maria Luiza","Dei","Parque São Paulo","Hortências","Parque Cecap I","Jardim São Rafael I","Parque São Paulo"]
+                tipoDoBairro.push(tipo[j]); //["Apartamento","Loja","Terreno","Casa","Apartamento","Apartamento","Terreno"]
+            }     
+        }
+
+        for (var j = 0; j < bairrosPossiveis.length; j++){ //["Jardim Maria Luiza","Dei","Parque São Paulo","Hortências","Parque Cecap I","Jardim São Rafael I"]
+
+            var nomeBairro = document.createElement("p");
+            nomeBairro.textContent = "Bairro: " + bairrosDaCidade[j] + ":";
+            nomeBairro.style.color = "red";
+            imoveis.appendChild(nomeBairro);
+
+            for(var k = 0; k < bairrosDaCidade.length; k++){ //7 elementos
+
+                 if(bairrosDaCidade[k] == bairrosPossiveis[j]){ //Jardim Maria Luiza == Jardim Maria Luiza
+                    var tipoBairro = document.createElement("p");
+                    tipoBairro.textContent = tipoDoBairro[k];
+                    tipoBairro.style.color = "green";
+                    imoveis.appendChild(tipoBairro); 
+                 }
+             }
+                 
+        }
+        
+    }
+
+}
 
 // Listeners
-btFiltrar.addEventListener("click", filtrarImoveis);
+ 
 btLimpar.addEventListener("click", limparFiltros);
+btFiltrar.addEventListener("click", filtrarImoveis)
 inBairro.addEventListener("focus", conferirBairros);
+btRelatorio.addEventListener("click", gerarRelatorio)
 
 // Chama essas funções ao carregar a página
 carregarNovosImoveis();
